@@ -4,3 +4,4 @@
 export * from "./context";
 export * from "./lifecycle";
 export * from "./types";
+export * from "./tool";
