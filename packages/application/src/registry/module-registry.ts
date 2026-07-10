@@ -1,11 +1,17 @@
 import type { ModuleConstructor } from "@forgemcp/core";
 
 /**
- * Stores all modules registered with the application.
+ * Maintains the collection of application modules.
  *
- * The registry is responsible for maintaining the collection
- * of application modules. Future versions will also manage
- * module instances and dependency relationships.
+ * The registry is responsible only for storing and
+ * querying registered modules.
+ *
+ * Future versions will also manage:
+ *
+ * - Module metadata
+ * - Module instances
+ * - Dependency graph
+ * - Plugin modules
  */
 export class ModuleRegistry {
   private readonly modules = new Set<ModuleConstructor>();
@@ -14,18 +20,13 @@ export class ModuleRegistry {
    * Registers a module.
    *
    * Duplicate registrations are ignored.
-   *
-   * @param module Module constructor.
    */
   public register(module: ModuleConstructor): void {
     this.modules.add(module);
   }
 
   /**
-   * Determines whether a module has been registered.
-   *
-   * @param module Module constructor.
-   * @returns True if the module exists.
+   * Determines whether a module has already been registered.
    */
   public has(module: ModuleConstructor): boolean {
     return this.modules.has(module);
@@ -39,9 +40,18 @@ export class ModuleRegistry {
   }
 
   /**
-   * Returns the number of registered modules.
+   * Number of registered modules.
    */
   public get size(): number {
     return this.modules.size;
+  }
+
+  /**
+   * Removes every registered module.
+   *
+   * Mainly useful for testing.
+   */
+  public clear(): void {
+    this.modules.clear();
   }
 }
