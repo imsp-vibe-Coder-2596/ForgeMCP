@@ -1,5 +1,5 @@
-import type { Tool } from "../tool";
-import type { Middleware } from "../middleware";
+import type { Tool } from "../tool/tool.js";
+import type { Middleware } from "../interceptor/index.js";
 
 /**
  * Collects contributions made by a module.

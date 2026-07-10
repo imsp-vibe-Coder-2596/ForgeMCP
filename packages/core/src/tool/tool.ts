@@ -1,7 +1,7 @@
-import type { ExecutionContext } from "../context";
-import type { MaybePromise } from "../types";
-import type { ToolMetadata } from "./tool-metadata";
-import type { ToolResult } from "./tool-result";
+import type { ExecutionContext } from "../context/execution-context.js";
+import type { MaybePromise } from "../types/maybe-promise.js";
+import type { ToolMetadata } from "./tool-metadata.js";
+import type { ToolResult } from "./tool-result.js";
 
 /**
  * Represents executable business capability.

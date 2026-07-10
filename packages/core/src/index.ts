@@ -1,10 +1,7 @@
-/**
- * Public API for @forgemcp/core.
- */
-export * from "./context";
-export * from "./lifecycle";
-export * from "./types";
-export * from "./tool";
-export * from "./middleware";
-export * from "./module";
-export * from "./application";
+export * from "./application/index.js";
+export * from "./context/index.js";
+export * from "./interceptor/index.js";
+export * from "./lifecycle/index.js";
+export * from "./module/index.js";
+export * from "./tool/index.js";
+export * from "./types/index.js";

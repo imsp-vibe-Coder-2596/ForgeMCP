@@ -1,4 +1,4 @@
-import type { Constructor } from "../types/index.js";
+import type { Constructor } from "../types/cosntructor.js";
 import type { Module } from "./module.js";
 
 /**

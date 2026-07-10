@@ -1,3 +1,3 @@
-export * from "./tool";
-export * from "./tool-metadata";
-export * from "./tool-result";
+export * from "./tool.js";
+export * from "./tool-metadata.js";
+export * from "./tool-result.js";

@@ -1,4 +1,4 @@
-import type { Lifecycle } from "../lifecycle";
+import type { Lifecycle } from "../lifecycle/lifecycle.js";
 
 /**
  * Represents a running Forge application.

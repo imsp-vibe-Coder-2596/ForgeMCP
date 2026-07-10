@@ -4,7 +4,7 @@
   "private": true,
   "description": "Enterprise TypeScript framework for building Model Context Protocol (MCP) servers.",
   "license": "MIT",
-  "packageManager": "pnpm@10",
+  "packageManager": "pnpm@11.10.0",
   "engines": {
     "node": ">=24"
   },

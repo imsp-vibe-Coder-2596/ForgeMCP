@@ -1,6 +1,6 @@
 import type { ExecutionContext } from "../context/index.js";
 import type { MaybePromise } from "../types/index.js";
-import type { ToolResult } from "../tool/index.js";
+import type { ToolResult } from "../tool/tool-result.js";
 
 /**
  * Represents an executable middleware pipeline.

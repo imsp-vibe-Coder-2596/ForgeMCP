@@ -1,6 +1,6 @@
-import type { MaybePromise } from "../types";
-import type { ModuleBuilder } from "./module-builder";
-import type { ModuleMetadata } from "./module-metadata";
+import type { MaybePromise } from "../types/maybe-promise.js";
+import type { ModuleBuilder } from "../module/module-builder.js";
+import type { ModuleMetadata } from "../module/module-metadata.js";
 
 /**
  * Represents a Forge module.

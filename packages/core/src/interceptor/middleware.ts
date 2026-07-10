@@ -1,13 +1,21 @@
-import type { ExecutionContext } from "../context/index.js";
-import type { MaybePromise } from "../types/index.js";
-import type { ToolResult } from "../tool/index.js";
+import type { ExecutionContext } from "../context/execution-context.js";
+import type { Next } from "./next.js";
 
 /**
- * Represents the next step in the execution pipeline.
+ * Represents a middleware component in the execution pipeline.
+ *
+ * Middleware can inspect, modify, or short-circuit a request before
+ * passing control to the next middleware or the target tool.
  */
-export interface Next<TInput = unknown, TResult = unknown> {
+export interface Middleware {
+  /**
+   * Invokes the middleware.
+   *
+   * @param context The current execution context.
+   * @param next Delegate that invokes the next middleware in the pipeline.
+   */
   invoke(
     context: ExecutionContext,
-    input: TInput
-  ): MaybePromise<ToolResult<TResult>>;
+    next: Next,
+  ): Promise<void>;
 }

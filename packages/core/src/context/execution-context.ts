@@ -1,4 +1,4 @@
-import type { CancellationToken } from "./cancellation.js";
+//import type { CancellationToken } from "./cancellation.js";
 import type { ExecutionMetadata } from "./execution-metadata.js";
 
 /**
@@ -13,5 +13,5 @@ export interface ExecutionContext {
   /**
    * Standard cancellation signal.
    */
-  readonly cancellation: CancellationToken;
+  //readonly cancellation: CancellationToken;
 }
