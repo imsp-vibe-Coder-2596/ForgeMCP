@@ -15,5 +15,8 @@
     "test": "pnpm -r test",
     "typecheck": "pnpm -r typecheck",
     "format": "pnpm -r format"
+  },
+  "devDependencies": {
+    "tsdown": "^0.22.4"
   }
 }
